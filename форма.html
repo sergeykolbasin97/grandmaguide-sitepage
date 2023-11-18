@@ -3,15 +3,79 @@
 <head>
     <title>Форма</title>
     <style>
-        .MyForm{
-            max-width: 600px;
-            margin: 0 auto;
+        .MyForm {
+            max-width: 600px; 
+            margin: 0 auto; /* выравнивание блока по центру */
+            text-align: center; /* выравнивание текста по центру */
+            border: 1px solid black;
         }
+
+        .MyForm__input { 
+            width: 50%; /* настройка ширины полей ввода формы */
+        }
+
+        .MyForm > h3 {
+            background-color: aquamarine;
+        }
+
+        .MyForm > div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px; /* настройка отступов между полями формы */
+        }
+
+        .MyForm textarea {
+            height: 100px;
+        }
+
     </style>
 </head>
 <body>
-<form class="MyForm">
-    Это форма
+<form class="MyForm" method="post" action="Главная.html"> <!--action - куда перейдет после отправки формы-->
+    <h3>Задай свой вопрос</h3>
+    <div>
+        <label for="topic">Тема вопроса:</label> <!--название поля формы. for- атрибут, указывающий какое поле заполнять при нажатии на данный текст-->
+        <input type="text" id="topic" name="question" class="MyForm__input"> <!--тип самого поля и то, под каким ключем уйдет на бек. атрибут id для связи с for-->
+    </div>
+    <div>
+        <label for="text">Текст вопроса:</label>
+        <textarea name="text" id="text" class="MyForm__input"></textarea>
+    </div>
+    <div>
+        <label for="email">Почта, на которую прислать ответ:</label>
+        <input type="email" id="email" name="email" class="MyForm__input">
+    </div>
+    <div>
+        <label>Позвонить?</label>
+        <div>
+            <label><input type="radio" name="call" value="yes">да</label>
+            <label><input type="radio" name="call" value="no">нет</label>
+        </div>
+    </div>
+    <div>
+        <label>Уточнение по обратной связи</label>
+        <div>
+            <label><input type="checkbox" name="time_call" value="1">Утром не звонить</label>
+            <label><input type="checkbox" name="short" value="1">Коротко</label>
+            <label><input type="checkbox" name="urgently" value="1">Срочно</label>
+        </div>
+    </div>
+    <div>
+        <label for="time">Время ответа:</label>
+        <select name="section" id="time" class="MyForm__input">
+            <option value="morning">9:00-12:00</option>
+            <option value="day">13:00-15:00</option>
+            <option value="evening">7:00-21:00</option>
+        </select>
+    </div>
+    <div>
+        <label for="file">Файл</label>
+        <input type="file" id="file" name="file">
+    </div>
+    <div>
+        <input type="reset" value="Сбросить">
+        <input type="submit" value="Отправить">        
+    </div>
 </form>
 </body>
 </html>
