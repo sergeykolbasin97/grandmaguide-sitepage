@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Форма</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         .MyForm {
             max-width: 600px; 
@@ -31,7 +32,7 @@
     </style>
 </head>
 <body>
-<form class="MyForm" method="post" action="Главная.html"> <!--action - куда перейдет после отправки формы-->
+<form class="MyForm" method="post" action="home.html"> <!--action - куда перейдет после отправки формы-->
     <h3>Задай свой вопрос</h3>
     <div>
         <label for="topic">Тема вопроса:</label> <!--название поля формы. for- атрибут, указывающий какое поле заполнять при нажатии на данный текст-->
@@ -73,9 +74,10 @@
         <input type="file" id="file" name="file">
     </div>
     <div>
-        <input type="reset" value="Сбросить">
-        <input type="submit" value="Отправить">        
+        <button type="button" class="btn btn-danger">Сбрость</button>
+        <button type="button" class="btn btn-success">Отправить</button      
     </div>
+    <<a href="home.html">Назад</a></p>
 </form>
 </body>
 </html>

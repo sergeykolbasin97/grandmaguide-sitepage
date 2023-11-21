@@ -24,7 +24,7 @@
         }
 
         section > .fixed-container {
-            background-image: url('background.jpg'); /* настройка картинки фона */
+            background-image: url('img/background.jpg'); /* настройка картинки фона */
             padding: 10px; /* толщина внутреннего отступа */
         }
 
